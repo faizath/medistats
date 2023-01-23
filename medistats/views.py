@@ -75,4 +75,9 @@ def log(request):
             "title":title[request.GET["display"]],
             "output":output
          })
+   else:
+      return render(request,("display.html"),{
+         "title":"You're not logged in!",
+         "output":"Login to use this application"
+      })
 
